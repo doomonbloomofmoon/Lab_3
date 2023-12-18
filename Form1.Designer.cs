@@ -28,115 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BExit = new System.Windows.Forms.Button();
-            this.BAdd = new System.Windows.Forms.Button();
-            this.txt6 = new System.Windows.Forms.TextBox();
-            this.txt5 = new System.Windows.Forms.TextBox();
-            this.txt4 = new System.Windows.Forms.TextBox();
-            this.txt3 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
-            this.txt1 = new System.Windows.Forms.TextBox();
+            this.ButtonExitFromProgram = new System.Windows.Forms.Button();
+            this.ButtonAddNote = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // BExit
+            // ButtonExitFromProgram
             // 
-            this.BExit.Location = new System.Drawing.Point(255, 240);
-            this.BExit.Name = "BExit";
-            this.BExit.Size = new System.Drawing.Size(94, 29);
-            this.BExit.TabIndex = 19;
-            this.BExit.Text = "Exit";
-            this.BExit.UseVisualStyleBackColor = true;
-            this.BExit.Click += new System.EventHandler(this.BExit_Click);
+            this.ButtonExitFromProgram.Location = new System.Drawing.Point(605, 240);
+            this.ButtonExitFromProgram.Name = "ButtonExitFromProgram";
+            this.ButtonExitFromProgram.Size = new System.Drawing.Size(94, 29);
+            this.ButtonExitFromProgram.TabIndex = 19;
+            this.ButtonExitFromProgram.Text = "Выйти";
+            this.ButtonExitFromProgram.UseVisualStyleBackColor = true;
+            this.ButtonExitFromProgram.Click += new System.EventHandler(this.ButtonExitFromProgram_Click);
             // 
-            // BAdd
+            // ButtonAddNote
             // 
-            this.BAdd.Location = new System.Drawing.Point(12, 240);
-            this.BAdd.Name = "BAdd";
-            this.BAdd.Size = new System.Drawing.Size(94, 29);
-            this.BAdd.TabIndex = 18;
-            this.BAdd.Text = "Add";
-            this.BAdd.UseVisualStyleBackColor = true;
-            this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
+            this.ButtonAddNote.Location = new System.Drawing.Point(374, 240);
+            this.ButtonAddNote.Name = "ButtonAddNote";
+            this.ButtonAddNote.Size = new System.Drawing.Size(94, 29);
+            this.ButtonAddNote.TabIndex = 18;
+            this.ButtonAddNote.Text = "Создать запись";
+            this.ButtonAddNote.UseVisualStyleBackColor = true;
+            this.ButtonAddNote.Click += new System.EventHandler(this.ButtonAddNote_Click);
             // 
-            // txt6
+            // textBox6
             // 
-            this.txt6.Location = new System.Drawing.Point(12, 192);
-            this.txt6.Name = "txt6";
-            this.txt6.PlaceholderText = "Должность";
-            this.txt6.ReadOnly = true;
-            this.txt6.Size = new System.Drawing.Size(337, 30);
-            this.txt6.TabIndex = 17;
+            this.textBox6.Location = new System.Drawing.Point(478, 192);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(221, 30);
+            this.textBox6.TabIndex = 17;
             // 
-            // txt5
+            // textBox5
             // 
-            this.txt5.Location = new System.Drawing.Point(12, 156);
-            this.txt5.Name = "txt5";
-            this.txt5.PlaceholderText = "Стаж";
-            this.txt5.ReadOnly = true;
-            this.txt5.Size = new System.Drawing.Size(337, 30);
-            this.txt5.TabIndex = 16;
+            this.textBox5.Location = new System.Drawing.Point(478, 156);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(221, 30);
+            this.textBox5.TabIndex = 16;
             // 
-            // txt4
+            // textBox4
             // 
-            this.txt4.Location = new System.Drawing.Point(12, 120);
-            this.txt4.Name = "txt4";
-            this.txt4.PlaceholderText = "Возраст";
-            this.txt4.ReadOnly = true;
-            this.txt4.Size = new System.Drawing.Size(337, 30);
-            this.txt4.TabIndex = 15;
+            this.textBox4.Location = new System.Drawing.Point(478, 120);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(221, 30);
+            this.textBox4.TabIndex = 15;
             // 
-            // txt3
+            // textBox3
             // 
-            this.txt3.Location = new System.Drawing.Point(12, 84);
-            this.txt3.Name = "txt3";
-            this.txt3.PlaceholderText = "Отчество";
-            this.txt3.ReadOnly = true;
-            this.txt3.Size = new System.Drawing.Size(337, 30);
-            this.txt3.TabIndex = 14;
+            this.textBox3.Location = new System.Drawing.Point(478, 84);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(221, 30);
+            this.textBox3.TabIndex = 14;
             // 
-            // txt2
+            // textBox2
             // 
-            this.txt2.Location = new System.Drawing.Point(12, 48);
-            this.txt2.Name = "txt2";
-            this.txt2.PlaceholderText = "Имя";
-            this.txt2.ReadOnly = true;
-            this.txt2.Size = new System.Drawing.Size(337, 30);
-            this.txt2.TabIndex = 13;
+            this.textBox2.Location = new System.Drawing.Point(478, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(221, 30);
+            this.textBox2.TabIndex = 13;
             // 
-            // txt1
+            // textBox1
             // 
-            this.txt1.Location = new System.Drawing.Point(12, 12);
-            this.txt1.Name = "txt1";
-            this.txt1.PlaceholderText = "Фамилия";
-            this.txt1.ReadOnly = true;
-            this.txt1.Size = new System.Drawing.Size(337, 30);
-            this.txt1.TabIndex = 12;
+            this.textBox1.Location = new System.Drawing.Point(478, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(221, 30);
+            this.textBox1.TabIndex = 12;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 23;
-            this.listBox1.Location = new System.Drawing.Point(355, 12);
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(337, 257);
             this.listBox1.TabIndex = 20;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(374, 195);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 23);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Должность";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(374, 159);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 23);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Стаж";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(374, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Возраст";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(374, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 23);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Отчество";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(374, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 23);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Имя";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(374, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Фамилия";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 282);
+            this.ClientSize = new System.Drawing.Size(721, 287);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.BExit);
-            this.Controls.Add(this.BAdd);
-            this.Controls.Add(this.txt6);
-            this.Controls.Add(this.txt5);
-            this.Controls.Add(this.txt4);
-            this.Controls.Add(this.txt3);
-            this.Controls.Add(this.txt2);
-            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.ButtonExitFromProgram);
+            this.Controls.Add(this.ButtonAddNote);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -146,14 +206,20 @@
 
         #endregion
 
-        private Button BExit;
-        private Button BAdd;
-        private TextBox txt6;
-        private TextBox txt5;
-        private TextBox txt4;
-        private TextBox txt3;
-        private TextBox txt2;
-        private TextBox txt1;
+        private Button ButtonExitFromProgram;
+        private Button ButtonAddNote;
+        private TextBox textBox6;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
         private ListBox listBox1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

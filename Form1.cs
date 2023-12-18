@@ -5,39 +5,36 @@ namespace IndividualPart
 {
     public partial class Form1 : Form
     {
-        List<Worker> list = new List<Worker>();
-
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void BAdd_Click(object sender, EventArgs e)
+        private void ButtonAddNote_Click(object sender, EventArgs e)
         {
-            CreateWorker cwForm = new CreateWorker();
-            cwForm.ShowDialog();
-            if (cwForm.Familiya != "")
-            {
-                txt1.Text = cwForm.Familiya;
-                txt2.Text = cwForm.Imuya;
-                txt3.Text = cwForm.Otchestvo;
-                txt4.Text = cwForm.Vozrast;
-                txt5.Text = cwForm.Staj;
-                txt6.Text = cwForm.Doljnost;
-                Worker worker = new Worker(txt1.Text, txt2.Text, txt3.Text, Convert.ToInt32(txt4.Text));
-                worker.WorkExperience = Convert.ToInt32(txt5.Text);
-                worker.Position = txt6.Text;
-                list.Add(worker);
-                string line = worker.FullName["Фамилия"] + "," + worker.FullName["Имя"] + "," + worker.FullName["Отчество"] + "," + worker.Age.ToString() + "," + worker.WorkExperience.ToString() + "," + worker.Position;
-                listBox1.Items.Add(line);
-            }
-        }
+            AddEmployee FormForAddEmployee = new AddEmployee();
+            FormForAddEmployee.ShowDialog();
 
-        private void BExit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы действительно хотите выйти?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (FormForAddEmployee.FullName != "")
             {
-                Application.Exit();
+                textBox1.Text = FormForAddEmployee.FullName;
+                textBox2.Text = FormForAddEmployee.Name;
+                textBox3.Text = FormForAddEmployee.LastName;
+                textBox4.Text = FormForAddEmployee.Age;
+                textBox5.Text = FormForAddEmployee.AgeWorking;
+                textBox6.Text = FormForAddEmployee.JobTitle;
+
+                Employee worker = new Employee(textBox1.Text, textBox2.Text, textBox3.Text, Convert.ToInt32(textBox4.Text));
+                worker.WorkExperience = Convert.ToInt32(textBox5.Text);
+                worker.Position = textBox6.Text;
+                
+                string line = worker.FullName + "," 
+                    + worker.Name + "," 
+                    + worker.LastName + "," 
+                    + worker.Age.ToString() + "," 
+                    + worker.WorkExperience.ToString() + "," 
+                    + worker.Position;
+                listBox1.Items.Add(line);
             }
         }
 
@@ -45,24 +42,26 @@ namespace IndividualPart
         {
             if (listBox1.SelectedIndex != -1)
             {
-                String selected = listBox1.SelectedItem.ToString(); 
-                String[] fields = selected.Split(',');
-                txt1.Text = fields[0];
-                txt2.Text = fields[1];
-                txt3.Text = fields[2];
-                txt4.Text = fields[3];
-                txt5.Text = fields[4];
-                txt6.Text = fields[5];
+                string selectedItem = listBox1.SelectedItem.ToString(); 
+                string[] lines = selectedItem.Split(',');
+                textBox1.Text = lines[0]; textBox2.Text = lines[1];
+                textBox3.Text = lines[2]; textBox4.Text = lines[3];
+                textBox5.Text = lines[4]; textBox6.Text = lines[5];
             }
             else 
             {
-                txt1.Text = "";
-                txt2.Text = "";
-                txt3.Text = "";
-                txt4.Text = "";
-                txt5.Text = "";
-                txt6.Text = "";
+                textBox1.Text = "";
+                textBox2.Text = textBox1.Text;
+                textBox3.Text = textBox2.Text;
+                textBox4.Text = textBox3.Text;
+                textBox5.Text = textBox5.Text;
+                textBox6.Text = textBox6.Text;
             }
+        }
+
+        private void ButtonExitFromProgram_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Выйти?", "Подтверждение действия", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes) Application.Exit();
         }
     }
 }

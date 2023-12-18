@@ -10,39 +10,39 @@ using System.Windows.Forms;
 
 namespace IndividualPart
 {
-    public partial class CreateWorker : Form
+    public partial class AddEmployee : Form
     {
-        public CreateWorker()
+        public AddEmployee()
         {
             InitializeComponent();
         }
 
-        public string Familiya
+        public string FullName
         {
             get { return textBox1.Text; }
             set { textBox1.Text = value; }
         }
-        public string Imuya
+        public string Name
         {
             get { return textBox2.Text; }
             set { textBox2.Text = value; }
         }
-        public string Otchestvo
+        public string LastName
         {
             get { return textBox3.Text; }
             set { textBox3.Text = value; }
         }
-        public string Vozrast
+        public string Age
         {
             get { return textBox4.Text; }
             set { textBox4.Text = value; }
         }
-        public string Staj
+        public string AgeWorking
         {
             get { return textBox5.Text; }
             set { textBox5.Text = value; }
         }
-        public string Doljnost
+        public string JobTitle
         {
             get { return textBox6.Text; }
             set { textBox6.Text = value; }

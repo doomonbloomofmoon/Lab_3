@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lab_2_indTask
 {
-    internal class Worker : Person
+    internal class Employee : Human
     {
-        /// <summary>
-        /// Поля + геттеры-сеттеры
-        /// </summary>
         public string Position = "";
         public int WorkExperience = 0;
         public int workExperience
@@ -32,9 +29,6 @@ namespace Lab_2_indTask
             }
         }
 
-        /// <summary>
-        /// Методы
-        /// </summary>
         public override void OutInfo()
         {
             base.OutInfo();
@@ -59,13 +53,7 @@ namespace Lab_2_indTask
             }
         }
 
-        /// <summary>
-        /// Конструкторы
-        /// </summary>
-        public Worker() { }
-        public Worker(int _age) : base(_age) { }
-        public Worker(string _surname, string _name, string _patronymic) : base(_surname, _name, _patronymic) { }
-        public Worker(string _surname, string _name, string _patronymic, int _age) : base(_surname, _name, _patronymic, _age) { }
+        public Employee(string _surname, string _name, string _patronymic, int _age) : base(_surname, _name, _patronymic, _age) { }
     }
 }
 
